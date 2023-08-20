@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://lvsvp7bk6fhr"]
+
+[ext_resource type="PackedScene" uid="uid://dc3ybroegj3yi" path="res://Obstacle.tscn" id="1_hl52t"]
+[ext_resource type="Texture2D" uid="uid://dmluj427jwapa" path="res://icon.svg" id="2_molwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s66xt"]
+size = Vector2(128, 128)
+
+[node name="Mine" instance=ExtResource("1_hl52t")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_s66xt")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_molwi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
