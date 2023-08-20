@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b0nj2t4hiob6a" path="res://Player.tscn" id="1_odt7v"]
 [ext_resource type="PackedScene" uid="uid://lvsvp7bk6fhr" path="res://Mine.tscn" id="2_7te8d"]
 [ext_resource type="PackedScene" uid="uid://ctcfpflkpbkgf" path="res://EnemyShark.tscn" id="3_v0qcx"]
-[ext_resource type="PackedScene" uid="uid://bwh133vw085xm" path="res://Sonar.tscn" id="3_xk4r6"]
+[ext_resource type="PackedScene" uid="uid://bwh133vw085xm" path="res://Sonar.tscn" id="4_xk4r6"]
 
 [node name="Main" type="Node2D"]
 
@@ -19,3 +19,5 @@ scale = Vector2(3, 3)
 
 [node name="Sonar" parent="." instance=ExtResource("4_xk4r6")]
 position = Vector2(45, 603)
+
+[connection signal="sonar_activated" from="Sonar" to="Mine" method="_on_sonar_sonar_activated"]
