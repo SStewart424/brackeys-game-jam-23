@@ -4,7 +4,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rq35x"]
 
-[node name="Obstacle" type="Area2D"]
+[node name="Obstacle" type="Area2D" groups=["Enemy"]]
 position = Vector2(159, 87)
 script = ExtResource("1_41g1h")
 metadata/_edit_group_ = true

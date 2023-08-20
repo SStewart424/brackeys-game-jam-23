@@ -4,8 +4,9 @@ extends CharacterBody2D
 @export var acceleration: float = 500.0
 @export var friction: float = 100.0
 
-@onready var _animated_sprite = $AnimationPlayer
+@export var health: int = 20
 
+@onready var _animated_sprite = $AnimationPlayer
 
 
 func _ready():
@@ -32,3 +33,9 @@ func player_movement(delta: float) -> void:
 
     move_and_slide()
 
+func take_damage(amount: int):
+    print("took damage")
+    health -= amount
+    
+    if health == 0:
+        hide()

@@ -29,18 +29,18 @@ _data = {
 "idle": SubResource("Animation_ir84q")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_kp00d")
 metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_vobhm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_sq5xc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_vobhm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
