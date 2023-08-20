@@ -2,11 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://b0nj2t4hiob6a" path="res://Player.tscn" id="1_odt7v"]
 [ext_resource type="PackedScene" uid="uid://lvsvp7bk6fhr" path="res://Mine.tscn" id="2_7te8d"]
+[ext_resource type="PackedScene" uid="uid://bwh133vw085xm" path="res://Sonar.tscn" id="3_xk4r6"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_odt7v")]
-position = Vector2(175, 220)
+position = Vector2(159, 252)
 
 [node name="Mine" parent="." instance=ExtResource("2_7te8d")]
 position = Vector2(826, 313)
+
+[node name="Sonar" parent="." instance=ExtResource("3_xk4r6")]
+position = Vector2(45, 603)
