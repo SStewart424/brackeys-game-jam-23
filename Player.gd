@@ -6,11 +6,11 @@ extends CharacterBody2D
 
 @export var health: int = 20
 
-@onready var _animated_sprite = $AnimationPlayer
+@onready var _animation = $AnimationPlayer
 
 
 func _ready():
-    _animated_sprite.play("idle")
+    _animation.play("idle")
 
 func _physics_process(delta: float) -> void:
     player_movement(delta)
@@ -36,6 +36,9 @@ func player_movement(delta: float) -> void:
 func take_damage(amount: int):
     print("took damage")
     health -= amount
+    _animation.play("hurt")
+    _animation.queue("idle")
+    
     
     if health == 0:
         hide()
