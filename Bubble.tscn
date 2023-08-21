@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Bubble.gd" id="1_wblfw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u2ghx"]
-radius = 17.0294
+radius = 8.0
 
 [node name="Bubble" type="Area2D"]
 script = ExtResource("1_wblfw")
@@ -14,4 +14,5 @@ shape = SubResource("CircleShape2D_u2ghx")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_jt0bw")
