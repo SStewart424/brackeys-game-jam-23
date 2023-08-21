@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cclic7y34kca0"]
+
+[ext_resource type="Texture2D" uid="uid://cn2l2wp355spm" path="res://bubble.png" id="1_jt0bw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2ghx"]
+radius = 17.0294
+
+[node name="Bubble" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u2ghx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jt0bw")

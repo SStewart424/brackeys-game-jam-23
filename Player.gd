@@ -8,6 +8,8 @@ extends CharacterBody2D
 
 @onready var _animation = $AnimationPlayer
 
+signal missile_fire
+
 
 func _ready():
     _animation.play("idle")
@@ -20,6 +22,10 @@ func get_input() -> Vector2:
     
     input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
     input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+    
+    if Input.is_action_just_pressed("fire"):
+        missile_fire.emit(position)
+        
     return input.normalized()
 
 
