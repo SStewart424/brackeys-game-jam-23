@@ -46,7 +46,7 @@ func take_damage(amount: int, knockbackDirection: Vector2 = Vector2.ZERO, knockb
     _animation.queue("idle")
     
     
-    if health == 0:
+    if health <= 0:
         hide()
     
     velocity = knockbackDirection.normalized() * knockbackForce
