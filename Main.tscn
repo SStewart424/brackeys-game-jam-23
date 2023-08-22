@@ -18,7 +18,7 @@ collision_layer = 1
 
 [node name="EnemyShark" parent="." instance=ExtResource("3_v0qcx")]
 position = Vector2(935, 160)
-scale = Vector2(3, 3)
+scale = Vector2(1, 1)
 
 [node name="Sonar" parent="." instance=ExtResource("4_xk4r6")]
 position = Vector2(45, 603)
