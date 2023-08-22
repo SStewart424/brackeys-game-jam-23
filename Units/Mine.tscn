@@ -1,12 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi30x8d1yotbd"]
+[gd_scene load_steps=7 format=3 uid="uid://bi30x8d1yotbd"]
 
 [ext_resource type="PackedScene" uid="uid://dc3ybroegj3yi" path="res://Units/Obstacle.tscn" id="1_hl52t"]
+[ext_resource type="Script" path="res://Units/Mine.gd" id="2_8emdi"]
 [ext_resource type="Texture2D" uid="uid://b2d45a3gmhanp" path="res://art/sea_mine.png" id="2_lvr5y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qk1po"]
 radius = 57.85
 
+[sub_resource type="Animation" id="Animation_88nyf"]
+resource_name = "idle"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-5, 9), Vector2(-10, -5), Vector2(5, -7), Vector2(5, 7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p00fx"]
+_data = {
+"idle": SubResource("Animation_88nyf")
+}
+
 [node name="Mine" instance=ExtResource("1_hl52t")]
+script = ExtResource("2_8emdi")
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, -1)
@@ -16,5 +40,11 @@ shape = SubResource("CircleShape2D_qk1po")
 position = Vector2(-3, -6)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_lvr5y")
+offset = Vector2(-6.60245, 4.51315)
+
+[node name="MineAnimation" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_p00fx")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
