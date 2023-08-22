@@ -1,18 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://lvsvp7bk6fhr"]
 
 [ext_resource type="PackedScene" uid="uid://dc3ybroegj3yi" path="res://Obstacle.tscn" id="1_hl52t"]
-[ext_resource type="Texture2D" uid="uid://dmluj427jwapa" path="res://icon.svg" id="2_molwi"]
+[ext_resource type="Texture2D" uid="uid://b2d45a3gmhanp" path="res://sea_mine.png" id="2_rfbrb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s66xt"]
-size = Vector2(128, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_qk1po"]
+radius = 57.85
 
 [node name="Mine" instance=ExtResource("1_hl52t")]
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_s66xt")
+shape = SubResource("CircleShape2D_qk1po")
 
 [node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("2_molwi")
+position = Vector2(-3, -6)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_rfbrb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
