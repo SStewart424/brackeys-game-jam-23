@@ -5,11 +5,16 @@ extends CharacterBody2D
 @export var knockback: float = 200.0
 @export var acceleration: float = 300.0
 @export var friction: float = 100.0
+@export var health: int = 10
 
 var target: Node2D
 
 func _ready():
     target = get_node("../Player")  # Adjust the path to the character node
+    
+func _process(_delta):
+    if health <= 0:
+        queue_free()
 
 func _physics_process(delta: float) -> void:
     move_towards_target(delta)
@@ -37,3 +42,5 @@ func move_towards_target(delta: float) -> void:
     
     move_and_slide()
 
+func take_damage(damage: int) -> void:
+    health -= damage
