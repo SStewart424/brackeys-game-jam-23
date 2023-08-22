@@ -26,6 +26,7 @@ _data = {
 
 [node name="Obstacle" type="Area2D" groups=["Enemy"]]
 position = Vector2(159, 87)
+collision_layer = 2
 script = ExtResource("1_41g1h")
 metadata/_edit_group_ = true
 

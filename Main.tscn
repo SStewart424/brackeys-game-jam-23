@@ -14,6 +14,7 @@ position = Vector2(175, 220)
 
 [node name="Mine" parent="." instance=ExtResource("2_7te8d")]
 position = Vector2(826, 313)
+collision_layer = 1
 
 [node name="EnemyShark" parent="." instance=ExtResource("3_v0qcx")]
 position = Vector2(935, 160)

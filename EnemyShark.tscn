@@ -9,6 +9,7 @@ height = 22.0873
 
 [node name="EnemyShark" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
+collision_layer = 2
 script = ExtResource("1_v553d")
 metadata/_edit_group_ = true
 
