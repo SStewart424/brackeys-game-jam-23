@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://lvsvp7bk6fhr"]
+[gd_scene load_steps=4 format=3 uid="uid://bi30x8d1yotbd"]
 
-[ext_resource type="PackedScene" uid="uid://dc3ybroegj3yi" path="res://Obstacle.tscn" id="1_hl52t"]
-[ext_resource type="Texture2D" uid="uid://b2d45a3gmhanp" path="res://sea_mine.png" id="2_rfbrb"]
+[ext_resource type="PackedScene" uid="uid://dc3ybroegj3yi" path="res://Units/Obstacle.tscn" id="1_hl52t"]
+[ext_resource type="Texture2D" uid="uid://b2d45a3gmhanp" path="res://art/sea_mine.png" id="2_lvr5y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qk1po"]
 radius = 57.85
@@ -15,6 +15,6 @@ shape = SubResource("CircleShape2D_qk1po")
 [node name="Sprite2D" parent="." index="1"]
 position = Vector2(-3, -6)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_rfbrb")
+texture = ExtResource("2_lvr5y")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

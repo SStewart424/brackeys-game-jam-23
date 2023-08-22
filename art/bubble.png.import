@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2d45a3gmhanp"
-path="res://.godot/imported/sea_mine.png-d4bb78f31988ac25d9c42de596bc60b5.ctex"
+uid="uid://cn2l2wp355spm"
+path="res://.godot/imported/bubble.png-8633d95d79d1e4014e55d465158c6f02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sea_mine.png"
-dest_files=["res://.godot/imported/sea_mine.png-d4bb78f31988ac25d9c42de596bc60b5.ctex"]
+source_file="res://art/bubble.png"
+dest_files=["res://.godot/imported/bubble.png-8633d95d79d1e4014e55d465158c6f02.ctex"]
 
 [params]
 

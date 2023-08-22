@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwh4xoemmjnsh"
-path="res://.godot/imported/32bit-shark-thresher3.svg-2f0132f993cdcaca5484896417abf064.ctex"
+uid="uid://cuu4jimfljk1c"
+path="res://.godot/imported/ykcrh5bj.bmp-f6787614c479e8faa2d9c68dcb7cb104.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://32bit-shark-thresher3.svg"
-dest_files=["res://.godot/imported/32bit-shark-thresher3.svg-2f0132f993cdcaca5484896417abf064.ctex"]
+source_file="res://art/ykcrh5bj.bmp"
+dest_files=["res://.godot/imported/ykcrh5bj.bmp-f6787614c479e8faa2d9c68dcb7cb104.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

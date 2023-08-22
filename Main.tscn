@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://oa08cq2rxqum"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_c6s4m"]
-[ext_resource type="PackedScene" uid="uid://b0nj2t4hiob6a" path="res://Player.tscn" id="1_odt7v"]
-[ext_resource type="PackedScene" uid="uid://lvsvp7bk6fhr" path="res://Mine.tscn" id="2_7te8d"]
-[ext_resource type="PackedScene" uid="uid://ctcfpflkpbkgf" path="res://EnemyShark.tscn" id="3_v0qcx"]
-[ext_resource type="PackedScene" uid="uid://bwh133vw085xm" path="res://Sonar.tscn" id="4_xk4r6"]
+[ext_resource type="PackedScene" uid="uid://ddnvukic3con4" path="res://Units/Player.tscn" id="1_odt7v"]
+[ext_resource type="PackedScene" uid="uid://bi30x8d1yotbd" path="res://Units/Mine.tscn" id="2_7te8d"]
+[ext_resource type="PackedScene" uid="uid://behiu4e5j6be4" path="res://Units/EnemyShark.tscn" id="3_v0qcx"]
+[ext_resource type="PackedScene" uid="uid://bwh133vw085xm" path="res://Weapons/Sonar.tscn" id="4_xk4r6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_c6s4m")

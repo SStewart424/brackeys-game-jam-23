@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwh133vw085xm"]
+
+[ext_resource type="Texture2D" uid="uid://dmluj427jwapa" path="res://art/icon.svg" id="1_vt1f2"]
+[ext_resource type="Script" path="res://Weapons/Sonar.gd" id="2_hft37"]
+
+[node name="Sonar" type="Sprite2D"]
+position = Vector2(261, 324)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_vt1f2")
+script = ExtResource("2_hft37")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
