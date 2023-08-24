@@ -1,6 +1,6 @@
 extends Node2D
 
-var bubble = preload("res://Weapons/Bubble.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
     pass # Replace with function body.
@@ -10,7 +10,3 @@ func _ready():
 func _process(delta):
     pass
 
-func _on_player_missile_fire(start_pos):
-    var bullet = bubble.instantiate()
-    bullet.position = start_pos
-    add_child(bullet)

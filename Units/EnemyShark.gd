@@ -11,7 +11,7 @@ var target: Node2D
 
 func _ready():
     target = get_node("../Player")  # Adjust the path to the character node
-    
+
 func _process(_delta):
     if health <= 0:
         queue_free()
@@ -39,7 +39,7 @@ func move_towards_target(delta: float) -> void:
         velocity = velocity.move_toward(direction * max_speed, acceleration * delta)
     else:
         velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-    
+
     move_and_slide()
 
 func take_damage(damage: int) -> void:
