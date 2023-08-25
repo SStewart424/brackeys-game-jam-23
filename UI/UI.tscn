@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hnmcm4j7ne1s"]
+
+[ext_resource type="Script" path="res://UI/UI.gd" id="1_glqs4"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_glqs4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DepthCounterLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
