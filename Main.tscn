@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://oa08cq2rxqum"]
+[gd_scene load_steps=4 format=3 uid="uid://oa08cq2rxqum"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_c6s4m"]
 [ext_resource type="PackedScene" uid="uid://dw3706sdg2nel" path="res://Units/Player.tscn" id="1_odt7v"]
 [ext_resource type="PackedScene" uid="uid://bi30x8d1yotbd" path="res://Units/Mine.tscn" id="2_7te8d"]
-[ext_resource type="PackedScene" uid="uid://behiu4e5j6be4" path="res://Units/EnemyShark.tscn" id="3_v0qcx"]
-[ext_resource type="PackedScene" uid="uid://bwh133vw085xm" path="res://Weapons/Sonar.tscn" id="4_xk4r6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_c6s4m")
@@ -17,11 +15,6 @@ position = Vector2(826, 313)
 collision_layer = 1
 collision_mask = 1
 
-[node name="EnemyShark" parent="." instance=ExtResource("3_v0qcx")]
-position = Vector2(935, 160)
-scale = Vector2(1, 1)
+[node name="EnemySpawnTimer" type="Timer" parent="."]
 
-[node name="Sonar" parent="." instance=ExtResource("4_xk4r6")]
-position = Vector2(45, 603)
-
-[connection signal="sonar_activated" from="Sonar" to="Mine" method="_on_sonar_sonar_activated"]
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
