@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddnvukic3con4"]
+[gd_scene load_steps=7 format=3 uid="uid://dw3706sdg2nel"]
 
 [ext_resource type="Script" path="res://Units/Player.gd" id="1_kp00d"]
 [ext_resource type="Texture2D" uid="uid://cuu4jimfljk1c" path="res://art/ykcrh5bj.bmp" id="2_h53sl"]
@@ -67,5 +67,7 @@ libraries = {
 }
 
 [node name="FireRateCooldownTimer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="timeout" from="FireRateCooldownTimer" to="." method="_on_fire_rate_cooldown_timer_timeout"]
