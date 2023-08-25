@@ -9,7 +9,7 @@ var bubble_scene = preload("res://Weapons/Bubble.tscn")
 @export var acceleration: float = 500.0
 @export var friction: float = 100.0
 
-@export var health: int = 20
+@export var health: int = 2
 
 @onready var _animation = $AnimationPlayer
 
@@ -52,6 +52,16 @@ func player_movement(delta: float) -> void:
 
     move_and_slide()
 
+func handle_player_death():
+    get_node("../UI").hide()
+    var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
+    print(position.y)
+    print(global_position.y)
+    death_screen.update_score(round(global_position.y/100))
+    get_tree().get_root().add_child(death_screen)
+    get_tree().paused = true
+
+
 func take_damage(amount: int, knockbackDirection: Vector2 = Vector2.ZERO, knockbackForce: float = 0.0):
     print("took damage")
     health -= amount
@@ -60,7 +70,7 @@ func take_damage(amount: int, knockbackDirection: Vector2 = Vector2.ZERO, knockb
 
 
     if health <= 0:
-        hide()
+        handle_player_death()
 
     velocity = knockbackDirection.normalized() * knockbackForce
     move_and_slide()
