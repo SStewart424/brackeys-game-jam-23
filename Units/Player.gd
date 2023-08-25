@@ -24,8 +24,8 @@ func _physics_process(delta: float) -> void:
 func get_input() -> Vector2:
     var input: Vector2 = Vector2.ZERO
 
-    input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-    input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+    input.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
+    input.y = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
     return input.normalized()
 
 

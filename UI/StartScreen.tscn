@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcnqnemyekaka"]
+
+[ext_resource type="Script" path="res://UI/StartScreen.gd" id="1_n116w"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_n116w")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Start"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
