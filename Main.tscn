@@ -1,12 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://oa08cq2rxqum"]
+[gd_scene load_steps=6 format=3 uid="uid://oa08cq2rxqum"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_c6s4m"]
 [ext_resource type="PackedScene" uid="uid://dw3706sdg2nel" path="res://Units/Player.tscn" id="1_odt7v"]
 [ext_resource type="PackedScene" uid="uid://bi30x8d1yotbd" path="res://Units/Mine.tscn" id="2_7te8d"]
+[ext_resource type="Texture2D" uid="uid://bxlg082u2kvfp" path="res://art/Sea2.png" id="2_hibfm"]
 [ext_resource type="PackedScene" uid="uid://hnmcm4j7ne1s" path="res://UI/UI.tscn" id="4_jw8wt"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_c6s4m")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1920, 1080)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(175, 235)
+texture = ExtResource("2_hibfm")
+region_rect = Rect2(0, 0, 1000, 1000)
 
 [node name="Player" parent="." instance=ExtResource("1_odt7v")]
 position = Vector2(175, 220)
