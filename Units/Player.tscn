@@ -69,5 +69,11 @@ libraries = {
 [node name="FireRateCooldownTimer" type="Timer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.4
+drag_top_margin = 0.3
+drag_right_margin = 0.4
+drag_bottom_margin = 0.4
 
 [connection signal="timeout" from="FireRateCooldownTimer" to="." method="_on_fire_rate_cooldown_timer_timeout"]
